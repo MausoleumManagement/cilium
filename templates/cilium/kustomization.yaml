@@ -1,0 +1,14 @@
+helmCharts:
+  # https://github.com/cilium/cilium/tree/main/install/kubernetes/cilium
+  # https://artifacthub.io/packages/helm/cilium/cilium
+  - name: cilium
+    repo: https://helm.cilium.io/
+    version: 1.17.2
+    releaseName: ciliumrelease
+    namespace: cilium
+    valuesFile: values.yaml
+    #additionalValuesFiles:
+    #- values-file-1.yml
+    #- values-file-2.yml
+resources:
+  - namespace.yaml
