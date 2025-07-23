@@ -1,14 +1,19 @@
-helmCharts:
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
   # https://github.com/cilium/cilium/tree/main/install/kubernetes/cilium
   # https://artifacthub.io/packages/helm/cilium/cilium
+helmCharts:
   - name: cilium
-    repo: https://helm.cilium.io/
-    version: 1.17.2
-    releaseName: ciliumrelease
     namespace: cilium
+    releaseName: ciliumrelease
+    repo: https://helm.cilium.io/
     valuesFile: values.yaml
+    version: 1.17.2
     #additionalValuesFiles:
     #- values-file-1.yml
     #- values-file-2.yml
 resources:
   - namespace.yaml
+patches:
+  - path: patch-delete-ca-secret.yaml
+  - path: patch-delete-hubble-secret.yaml
