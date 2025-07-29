@@ -1,0 +1,14 @@
+# https://docs.cilium.io/en/stable/helm-reference/
+
+# if we want to use istio with cilium, we need to configure these values
+#cni:
+#  # istio needs this to be set, otherwise cilium will clean up istios CNI-plugin
+#  # https://istio.io/latest/docs/ambient/install/platform-prerequisites/#cilium
+#  exclusive: false
+#
+#socketLB:
+#  # cilium suggests to set the following when using istio
+#  # otherwise istio  can't intercept network traffic
+#  # https://docs.cilium.io/en/latest/network/servicemesh/istio/
+#  enabled: true
+#  hostNamespaceOnly: true

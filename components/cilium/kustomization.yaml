@@ -9,9 +9,6 @@ helmCharts:
     repo: https://helm.cilium.io/
     valuesFile: values.yaml
     version: 1.17.6
-    #additionalValuesFiles:
-    #- values-file-1.yml
-    #- values-file-2.yml
 resources:
   - namespace.yaml
 patches:
