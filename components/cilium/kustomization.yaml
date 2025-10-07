@@ -14,3 +14,4 @@ resources:
 patches:
   - path: patch-delete-ca-secret.yaml
   - path: patch-delete-hubble-secret.yaml
+  - path: patch-delete-hubble-relay-client-certs-secret.yaml

@@ -12,3 +12,11 @@
 #  # https://docs.cilium.io/en/latest/network/servicemesh/istio/
 #  enabled: true
 #  hostNamespaceOnly: true
+
+hubble:
+  enabled: true
+  # as per its description, this value is required when using hubble relay
+  # https://github.com/cilium/cilium/issues/13537
+  listenAddress: ":4244"
+  relay:
+    enabled: true
