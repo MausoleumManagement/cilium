@@ -550,7 +550,6 @@ data:
   enable-lb-ipam: "true"
   enable-masquerade-to-route-source: "false"
   enable-metrics: "true"
-  enable-node-port: "false"
   enable-node-selector-labels: "false"
   enable-non-default-deny-policies: "true"
   enable-policy: default
@@ -585,7 +584,8 @@ data:
   iptables-random-fully: "false"
   k8s-require-ipv4-pod-cidr: "false"
   k8s-require-ipv6-pod-cidr: "false"
-  kube-proxy-replacement: "false"
+  kube-proxy-replacement: "true"
+  kube-proxy-replacement-healthz-bind-address: ""
   max-connected-clusters: "255"
   mesh-auth-enabled: "true"
   mesh-auth-gc-interval: 5m0s
